@@ -1,0 +1,7 @@
+.dg-flujo{width:100%;max-width:900px;display:block;margin:0 auto}
+.f{fill:var(--morado);transition:fill .3s}
+g.on .f{fill:var(--tinta)}
+.tx{fill:#fff;font:600 13px Inter,sans-serif}
+.fl path{fill:none;stroke:var(--violeta);stroke-width:2}
+.punta{fill:var(--violeta)}
+.nota{fill:var(--suave);font:600 13px Inter,sans-serif}

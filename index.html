@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | Metodologías de software</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header class="top">
+        <a href="index.html" class="marca" aria-label="Ir al inicio">
+            <img src="assets/udi-logo-recorte.png" alt="Logo de la UDI">
+            <span>Metodologías de software</span>
+        </a>
+        <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="drawer"><i></i><i></i><i></i></button>
+    </header>
+
+    <div id="scrim" class="scrim"></div>
+    <nav id="drawer" class="drawer" aria-label="Navegación principal">
+        <label for="buscar" class="sr">Buscar en el sitio</label>
+        <input id="buscar" type="search" placeholder="Buscar sprint, WIP, Scrum..." autocomplete="off">
+        <div id="resultados" class="resultados"></div>
+        <div class="lista">
+            <a href="index.html" class="act" aria-current="page">Inicio</a>
+            <span class="sep">Metodologías</span>
+            <a href="cascada.html">Cascada (Waterfall)</a>
+            <a href="scrum.html">Scrum</a>
+            <a href="kanban.html">Kanban</a>
+            <a href="devops.html">DevOps</a>
+            <a href="scrumban.html">Scrumban</a>
+            <span class="sep">Recursos</span>
+            <a href="comparativa.html">Tabla comparativa</a>
+            <a href="glosario.html">Glosario</a>
+            <a href="referencias.html">Referencias</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-txt">
+                <p class="lead">Introducción a la Ingeniería · UDI San Gil</p>
+                <h1>Del plan rígido a la entrega continua</h1>
+                <p>Cinco formas de organizar el desarrollo de software: Cascada, Scrum, Kanban, Scrumban y DevOps.</p>
+                <a class="btn" href="#metodologias">Explorar metodologías</a>
+            </div>
+            <div class="orbita" aria-label="Las cinco metodologías en órbita">
+                <div class="nucleo"><span>Ciclo de vida del software</span></div>
+                <ul class="giro">
+                    <li style="--i:0"><a href="cascada.html">Cascada</a></li>
+                    <li style="--i:1"><a href="scrum.html">Scrum</a></li>
+                    <li style="--i:2"><a href="kanban.html">Kanban</a></li>
+                    <li style="--i:3"><a href="devops.html">DevOps</a></li>
+                    <li style="--i:4"><a href="scrumban.html">Scrumban</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="ficha-fila" aria-label="Datos del estudiante">
+            <div class="hv">
+                <dl>
+                    <dt>Estudiante</dt>
+                    <dd>Edwin Santiago Plata Torrado</dd>
+                </dl>
+            </div>
+            <div class="hv">
+                <dl>
+                    <dt>Carrera</dt>
+                    <dd>Ingeniería de Sistemas</dd>
+                </dl>
+            </div>
+            <div class="hv">
+                <dl>
+                    <dt>Semestre</dt>
+                    <dd>Primero</dd>
+                </dl>
+            </div>
+            <div class="hv">
+                <dl>
+                    <dt>Universidad</dt>
+                    <dd>UDI, sede San Gil</dd>
+                </dl>
+            </div>
+        </section>
+        <section class="bloque">
+            <h2>Introducción</h2>
+            <div class="intro">
+                <article class="hv">
+                    <h3>¿Qué es el ciclo de vida del software?</h3>
+                    <p>Son las etapas por las que pasa un sistema desde la idea hasta su retiro: requisitos, diseño,
+                        construcción, pruebas, despliegue y mantenimiento.</p>
+                </article>
+                <article class="hv">
+                    <h3>¿Qué son las metodologías de desarrollo?</h3>
+                    <p>Marcos de trabajo que definen cómo se organizan esas etapas, quién hace qué y cuándo se entrega
+                        valor. Unas planifican todo al inicio y otras se adaptan al cambio.</p>
+                </article>
+                <article class="hv">
+                    <h3>¿Por qué importan para un ingeniero de sistemas?</h3>
+                    <p>Programar es solo una parte del trabajo. Una buena metodología reduce riesgos, controla tiempos y
+                        costos y asegura que el producto cumpla lo que el cliente necesita.</p>
+                </article>
+            </div>
+        </section>
+        <section class="bloque" id="metodologias">
+            <h2>Metodologías investigadas</h2>
+            <div class="chips" role="group" aria-label="Filtrar por enfoque"><button class="chip" data-g="Todas"
+                    aria-pressed="true">Todas</button><button class="chip" data-g="Tradicional"
+                    aria-pressed="false">Tradicional</button><button class="chip" data-g="Ágil"
+                    aria-pressed="false">Ágil</button><button class="chip" data-g="Híbrido"
+                    aria-pressed="false">Híbrido</button><button class="chip" data-g="Filosofía moderna"
+                    aria-pressed="false">Filosofía moderna</button></div>
+            <div class="grid"><a class="tarj" href="cascada.html" data-grupo="Tradicional">
+                    <h3>Cascada (Waterfall)</h3><span class="tag">Tradicional / Predictiva</span>
+                    <p>Modelo secuencial: cada fase termina por completo antes de empezar la siguiente. Lo describió
+                        Winston Royce en 1970.</p>
+                </a><a class="tarj" href="scrum.html" data-grupo="Ágil">
+                    <h3>Scrum</h3><span class="tag">Ágil</span>
+                    <p>Marco ágil que divide el trabajo en sprints de 1 a 4 semanas y entrega un incremento funcional en
+                        cada uno.</p>
+                </a><a class="tarj" href="kanban.html" data-grupo="Ágil">
+                    <h3>Kanban</h3><span class="tag">Ágil / Flujo continuo</span>
+                    <p>Método que muestra el trabajo en un tablero y limita las tareas simultáneas para que el flujo no
+                        se atasque. Nació en Toyota y David J. Anderson lo adaptó al software.</p>
+                </a><a class="tarj" href="devops.html" data-grupo="Filosofía moderna">
+                    <h3>DevOps</h3><span class="tag">Filosofía moderna</span>
+                    <p>Cultura y prácticas que unen desarrollo (Dev) y operaciones (Ops) para entregar software con
+                        rapidez, automatización y confiabilidad.</p>
+                </a><a class="tarj" href="scrumban.html" data-grupo="Híbrido">
+                    <h3>Scrumban</h3><span class="tag">Híbrido</span>
+                    <p>Combina los roles y reuniones de Scrum con el tablero y los límites WIP de Kanban. Nació como
+                        puente para equipos que migran de Scrum a flujo continuo.</p>
+                </a></div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <img src="assets/udi-logo-recorte.png" alt="">
+        <p>Edwin Santiago Plata Torrado · Ingeniería de Sistemas · UDI San Gil</p>
+    </footer>
+
+    <script src="js/base.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

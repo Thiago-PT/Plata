@@ -1,0 +1,5 @@
+.dg-tablero{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.7rem}
+.col{background:var(--lavanda);border-radius:10px;padding:.7rem;min-height:150px;transition:background .3s}
+.col h4{font-size:.85rem;margin-bottom:.6rem;transition:color .3s}
+.col.on{background:var(--tinta)}.col.on h4{color:#fff}
+.tarjeta{background:#fff;border-radius:8px;padding:.45rem .6rem;margin-bottom:.45rem;font-size:.88rem;border-left:3px solid var(--cian)}

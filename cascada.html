@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cascada (Waterfall) | Metodologías de software</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/metodologia.css">
+  <link rel="stylesheet" href="css/cascada.css">
+</head>
+<body>
+  <header class="top">
+    <a href="index.html" class="marca" aria-label="Ir al inicio">
+      <img src="assets/udi-logo-recorte.png" alt="Logo de la UDI">
+      <span>Metodologías de software</span>
+    </a>
+    <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+  </header>
+
+  <div id="scrim" class="scrim"></div>
+  <nav id="drawer" class="drawer" aria-label="Navegación principal">
+    <label for="buscar" class="sr">Buscar en el sitio</label>
+    <input id="buscar" type="search" placeholder="Buscar sprint, WIP, Scrum..." autocomplete="off">
+    <div id="resultados" class="resultados"></div>
+    <div class="lista">
+      <a href="index.html">Inicio</a>
+      <span class="sep">Metodologías</span>
+      <a href="cascada.html" class="act" aria-current="page">Cascada (Waterfall)</a>
+      <a href="scrum.html">Scrum</a>
+      <a href="kanban.html">Kanban</a>
+      <a href="devops.html">DevOps</a>
+      <a href="scrumban.html">Scrumban</a>
+      <span class="sep">Recursos</span>
+      <a href="comparativa.html">Tabla comparativa</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="referencias.html">Referencias</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="cab"><span class="tag">Tradicional / Predictiva</span><h1>Cascada (Waterfall)</h1><p>Modelo secuencial: cada fase termina por completo antes de empezar la siguiente. Lo describió Winston Royce en 1970.</p></header>
+    <section class="bloque"><h2>Ciclo de vida</h2>
+      <div class="dg"><div class="dg-cascada" role="group" aria-label="Diagrama de cascada"><div class="paso" data-paso="0" style="margin-left:0%">Requisitos</div><div class="paso" data-paso="1" style="margin-left:7%">Diseño</div><div class="paso" data-paso="2" style="margin-left:14%">Implementación</div><div class="paso" data-paso="3" style="margin-left:21%">Pruebas</div><div class="paso" data-paso="4" style="margin-left:28%">Despliegue</div><div class="paso" data-paso="5" style="margin-left:35%">Mantenimiento</div></div></div>
+      <ol class="pasos"><li class="hv" data-paso="0"><strong>Requisitos</strong><span>Se documentan todas las necesidades del cliente antes de diseñar.</span></li><li class="hv" data-paso="1"><strong>Diseño</strong><span>Se define la arquitectura, los datos y las interfaces.</span></li><li class="hv" data-paso="2"><strong>Implementación</strong><span>El equipo programa lo que se diseñó.</span></li><li class="hv" data-paso="3"><strong>Pruebas</strong><span>Se comprueba que el sistema cumpla los requisitos.</span></li><li class="hv" data-paso="4"><strong>Despliegue</strong><span>El sistema se instala y se entrega al cliente.</span></li><li class="hv" data-paso="5"><strong>Mantenimiento</strong><span>Se corrigen fallos y se hacen mejoras tras la entrega.</span></li></ol></section>
+    <section class="bloque"><h2>Características principales</h2><div class="tres"><article class="hv"><p>Fases lineales, sin traslape entre ellas.</p></article><article class="hv"><p>Documentación completa en cada etapa.</p></article><article class="hv"><p>Requisitos fijados al inicio; el cliente ve el producto al final.</p></article></div></section>
+    <section class="bloque dos"><div class="pro hv"><h2>Ventajas</h2><ul><li>Fácil de entender y de planificar.</li><li>Costos y tiempos predecibles.</li><li>Deja documentación sólida para el mantenimiento.</li></ul></div><div class="con hv"><h2>Desventajas</h2><ul><li>Cambiar algo a mitad del camino es muy costoso.</li><li>Los errores aparecen tarde, en las pruebas.</li><li>El cliente no ve avances hasta el final.</li></ul></div></section>
+  </main>
+
+  <footer class="pie">
+    <img src="assets/udi-logo-recorte.png" alt="">
+    <p>Edwin Santiago Plata Torrado · Ingeniería de Sistemas · UDI San Gil</p>
+  </footer>
+
+  <script src="js/base.js"></script>
+  <script src="js/cascada.js"></script>
+</body>
+</html>

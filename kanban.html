@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kanban | Metodologías de software</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/metodologia.css">
+  <link rel="stylesheet" href="css/kanban.css">
+</head>
+<body>
+  <header class="top">
+    <a href="index.html" class="marca" aria-label="Ir al inicio">
+      <img src="assets/udi-logo-recorte.png" alt="Logo de la UDI">
+      <span>Metodologías de software</span>
+    </a>
+    <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+  </header>
+
+  <div id="scrim" class="scrim"></div>
+  <nav id="drawer" class="drawer" aria-label="Navegación principal">
+    <label for="buscar" class="sr">Buscar en el sitio</label>
+    <input id="buscar" type="search" placeholder="Buscar sprint, WIP, Scrum..." autocomplete="off">
+    <div id="resultados" class="resultados"></div>
+    <div class="lista">
+      <a href="index.html">Inicio</a>
+      <span class="sep">Metodologías</span>
+      <a href="cascada.html">Cascada (Waterfall)</a>
+      <a href="scrum.html">Scrum</a>
+      <a href="kanban.html" class="act" aria-current="page">Kanban</a>
+      <a href="devops.html">DevOps</a>
+      <a href="scrumban.html">Scrumban</a>
+      <span class="sep">Recursos</span>
+      <a href="comparativa.html">Tabla comparativa</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="referencias.html">Referencias</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="cab"><span class="tag">Ágil / Flujo continuo</span><h1>Kanban</h1><p>Método que muestra el trabajo en un tablero y limita las tareas simultáneas para que el flujo no se atasque. Nació en Toyota y David J. Anderson lo adaptó al software.</p></header>
+    <section class="bloque"><h2>Ciclo de vida</h2>
+      <div class="dg"><div class="dg-tablero" role="group" aria-label="Tablero Kanban"><div class="col" data-paso="0"><h4>Por hacer</h4><div class="tarjeta">Tarea A</div><div class="tarjeta">Tarea B</div></div><div class="col" data-paso="1"><h4>En progreso (límite 2)</h4><div class="tarjeta">Tarea C</div></div><div class="col" data-paso="2"><h4>Revisión</h4><div class="tarjeta">Tarea D</div></div><div class="col" data-paso="3"><h4>Hecho</h4><div class="tarjeta">Tarea E</div></div></div></div>
+      <ol class="pasos"><li class="hv" data-paso="0"><strong>Por hacer</strong><span>Tarjetas priorizadas que esperan turno.</span></li><li class="hv" data-paso="1"><strong>En progreso</strong><span>Se trabaja respetando el límite de tareas simultáneas (WIP).</span></li><li class="hv" data-paso="2"><strong>Revisión</strong><span>Se valida la calidad antes de dar la tarea por terminada.</span></li><li class="hv" data-paso="3"><strong>Hecho</strong><span>La tarea se entrega; su tiempo de ciclo alimenta las mejoras.</span></li></ol></section>
+    <section class="bloque"><h2>Características principales</h2><div class="tres"><article class="hv"><p>Sin roles ni iteraciones obligatorias.</p></article><article class="hv"><p>Límites WIP que evitan la multitarea.</p></article><article class="hv"><p>Entrega continua, tarea por tarea.</p></article></div></section>
+    <section class="bloque dos"><div class="pro hv"><h2>Ventajas</h2><ul><li>Se adopta sobre el proceso que ya existe.</li><li>Hace visibles los cuellos de botella.</li><li>Admite cambios de prioridad en cualquier momento.</li></ul></div><div class="con hv"><h2>Desventajas</h2><ul><li>Sin plazos fijos puede faltar sentido de urgencia.</li><li>Un tablero desordenado deja de servir.</li><li>Poca ayuda para planificar a largo plazo.</li></ul></div></section>
+  </main>
+
+  <footer class="pie">
+    <img src="assets/udi-logo-recorte.png" alt="">
+    <p>Edwin Santiago Plata Torrado · Ingeniería de Sistemas · UDI San Gil</p>
+  </footer>
+
+  <script src="js/base.js"></script>
+  <script src="js/kanban.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Referencias | Metodologías de software</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/referencias.css">
+</head>
+<body>
+  <header class="top">
+    <a href="index.html" class="marca" aria-label="Ir al inicio">
+      <img src="assets/udi-logo-recorte.png" alt="Logo de la UDI">
+      <span>Metodologías de software</span>
+    </a>
+    <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+  </header>
+
+  <div id="scrim" class="scrim"></div>
+  <nav id="drawer" class="drawer" aria-label="Navegación principal">
+    <label for="buscar" class="sr">Buscar en el sitio</label>
+    <input id="buscar" type="search" placeholder="Buscar sprint, WIP, Scrum..." autocomplete="off">
+    <div id="resultados" class="resultados"></div>
+    <div class="lista">
+      <a href="index.html">Inicio</a>
+      <span class="sep">Metodologías</span>
+      <a href="cascada.html">Cascada (Waterfall)</a>
+      <a href="scrum.html">Scrum</a>
+      <a href="kanban.html">Kanban</a>
+      <a href="devops.html">DevOps</a>
+      <a href="scrumban.html">Scrumban</a>
+      <span class="sep">Recursos</span>
+      <a href="comparativa.html">Tabla comparativa</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="referencias.html" class="act" aria-current="page">Referencias</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="cab"><h1>Referencias</h1><p>Fuentes consultadas, en formato APA.</p></header>
+    <ul class="refs"><li class="hv">Anderson, D. J. (2010). Kanban: Successful evolutionary change for your technology business. Blue Hole Press.</li><li class="hv">Kim, G., Humble, J., Debois, P., &amp; Willis, J. (2016). The DevOps handbook. IT Revolution Press.</li><li class="hv">Ladas, C. (2009). Scrumban: Essays on Kanban systems for lean software development. Modus Cooperandi Press.</li><li class="hv">Royce, W. W. (1970). Managing the development of large software systems. Proceedings of IEEE WESCON, 328-338.</li><li class="hv">Schwaber, K., &amp; Sutherland, J. (2020). La guía de Scrum. https://scrumguides.org</li><li class="hv">Sommerville, I. (2011). Ingeniería de software (9.ª ed.). Pearson Educación.</li></ul>
+  </main>
+
+  <footer class="pie">
+    <img src="assets/udi-logo-recorte.png" alt="">
+    <p>Edwin Santiago Plata Torrado · Ingeniería de Sistemas · UDI San Gil</p>
+  </footer>
+
+  <script src="js/base.js"></script>
+  <script src="js/referencias.js"></script>
+</body>
+</html>
