@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scrum | Metodologías de software</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/metodologia.css">
+  <link rel="stylesheet" href="css/scrum.css">
+</head>
+<body>
+  <header class="top">
+    <a href="index.html" class="marca" aria-label="Ir al inicio">
+      <img src="assets/udi-logo-recorte.png" alt="Logo de la UDI">
+      <span>Metodologías de software</span>
+    </a>
+    <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+  </header>
+
+  <div id="scrim" class="scrim"></div>
+  <nav id="drawer" class="drawer" aria-label="Navegación principal">
+    <label for="buscar" class="sr">Buscar en el sitio</label>
+    <input id="buscar" type="search" placeholder="Buscar sprint, WIP, Scrum..." autocomplete="off">
+    <div id="resultados" class="resultados"></div>
+    <div class="lista">
+      <a href="index.html">Inicio</a>
+      <span class="sep">Metodologías</span>
+      <a href="cascada.html">Cascada (Waterfall)</a>
+      <a href="scrum.html" class="act" aria-current="page">Scrum</a>
+      <a href="kanban.html">Kanban</a>
+      <a href="devops.html">DevOps</a>
+      <a href="scrumban.html">Scrumban</a>
+      <span class="sep">Recursos</span>
+      <a href="comparativa.html">Tabla comparativa</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="referencias.html">Referencias</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="cab"><span class="tag">Ágil</span><h1>Scrum</h1><p>Marco ágil que divide el trabajo en sprints de 1 a 4 semanas y entrega un incremento funcional en cada uno.</p></header>
+    <section class="bloque"><h2>Ciclo de vida</h2>
+      <div class="dg"><svg viewBox="0 0 520 340" class="dg-ciclo" role="group" aria-label="Ciclo de un sprint"><circle class="anillo" cx="260" cy="170" r="108"/><text class="centro" x="260" y="168" text-anchor="middle">Sprint</text><text class="centro" x="260" y="186" text-anchor="middle">1 a 4 semanas</text><g data-paso="0"><circle class="f" cx="260.0" cy="62.0" r="17"/><text class="num" x="260.0" y="67.0" text-anchor="middle">1</text><text class="lbl" x="260.0" y="32.0" text-anchor="middle">Product Backlog</text></g><g data-paso="1"><circle class="f" cx="362.7" cy="136.6" r="17"/><text class="num" x="362.7" y="141.6" text-anchor="middle">2</text><text class="lbl" x="395.1" y="130.1" text-anchor="start">Sprint Planning</text></g><g data-paso="2"><circle class="f" cx="323.5" cy="257.4" r="17"/><text class="num" x="323.5" y="262.4" text-anchor="middle">3</text><text class="lbl" x="343.5" y="288.9" text-anchor="start">Sprint y Daily Scrum</text></g><g data-paso="3"><circle class="f" cx="196.5" cy="257.4" r="17"/><text class="num" x="196.5" y="262.4" text-anchor="middle">4</text><text class="lbl" x="176.5" y="288.9" text-anchor="end">Sprint Review</text></g><g data-paso="4"><circle class="f" cx="157.3" cy="136.6" r="17"/><text class="num" x="157.3" y="141.6" text-anchor="middle">5</text><text class="lbl" x="124.9" y="130.1" text-anchor="end">Retrospectiva</text></g></svg></div>
+      <ol class="pasos"><li class="hv" data-paso="0"><strong>Product Backlog</strong><span>El Product Owner prioriza lo que el cliente necesita.</span></li><li class="hv" data-paso="1"><strong>Sprint Planning</strong><span>El equipo elige qué construirá en el sprint.</span></li><li class="hv" data-paso="2"><strong>Sprint y Daily Scrum</strong><span>Se desarrolla, con una reunión diaria de 15 minutos para sincronizarse.</span></li><li class="hv" data-paso="3"><strong>Sprint Review</strong><span>Se muestra el incremento a los interesados y se recibe retroalimentación.</span></li><li class="hv" data-paso="4"><strong>Retrospectiva</strong><span>El equipo decide cómo mejorar su forma de trabajar.</span></li></ol></section>
+    <section class="bloque"><h2>Características principales</h2><div class="tres"><article class="hv"><p>Tres roles: Product Owner, Scrum Master y equipo de desarrollo.</p></article><article class="hv"><p>Sprints de duración fija con eventos regulares.</p></article><article class="hv"><p>Equipos pequeños que se autoorganizan.</p></article></div></section>
+    <section class="bloque dos"><div class="pro hv"><h2>Ventajas</h2><ul><li>Entrega valor al cliente cada pocas semanas.</li><li>Se adapta a los cambios entre sprints.</li><li>La retrospectiva impulsa la mejora continua.</li></ul></div><div class="con hv"><h2>Desventajas</h2><ul><li>Exige disciplina y compromiso de todo el equipo.</li><li>Escala con dificultad a equipos grandes.</li><li>Si el Product Owner falla, se pierde el rumbo.</li></ul></div></section>
+  </main>
+
+  <footer class="pie">
+    <img src="assets/udi-logo-recorte.png" alt="">
+    <p>Edwin Santiago Plata Torrado · Ingeniería de Sistemas · UDI San Gil</p>
+  </footer>
+
+  <script src="js/base.js"></script>
+  <script src="js/scrum.js"></script>
+</body>
+</html>

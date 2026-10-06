@@ -1,0 +1,59 @@
+:root{
+  --tinta:#1E1B4B; --morado:#5B21B6; --violeta:#7C3AED; --lavanda:#EDE9FE; --niebla:#F8F7FF;
+  --cian:#22D3EE; --texto:#2B2A3F; --suave:#6B6A85; --borde:#DDD6FE; --ok:#0F766E; --mal:#B4234B;
+  --r:14px; --sombra:0 8px 24px rgba(91,33,182,.10);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--texto);background:var(--niebla);line-height:1.65;font-size:16px}
+h1,h2,h3,h4{font-family:Sora,Inter,sans-serif;color:var(--tinta);line-height:1.2}
+a{color:var(--morado)}
+:focus-visible{outline:3px solid var(--cian);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* Encabezado */
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.25rem;background:#fff;border-bottom:1px solid var(--borde)}
+.marca{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--tinta);font-family:Sora,sans-serif;font-weight:700}
+.marca img{height:34px;width:auto}
+.burger{background:var(--morado);border:0;border-radius:10px;width:44px;height:44px;display:grid;place-content:center;gap:5px;cursor:pointer}
+.burger i{display:block;width:20px;height:2px;background:#fff;border-radius:2px;transition:transform .25s}
+.menu-abierto .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-abierto .burger i:nth-child(2){opacity:0}
+.menu-abierto .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Menú lateral con buscador */
+.scrim{position:fixed;inset:0;background:rgba(30,27,75,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:30}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(340px,88vw);background:#fff;z-index:40;padding:1.25rem;overflow-y:auto;transform:translateX(100%);visibility:hidden;transition:transform .3s,visibility .3s;box-shadow:-12px 0 32px rgba(30,27,75,.18)}
+.menu-abierto .drawer{transform:none;visibility:visible}
+.menu-abierto .scrim{opacity:1;pointer-events:auto}
+.drawer input,.filtro{width:100%;padding:.7rem 1rem;border:1.5px solid var(--borde);border-radius:10px;font:inherit;background:var(--niebla)}
+.drawer input:focus,.filtro:focus{border-color:var(--violeta);outline:none;box-shadow:0 0 0 3px var(--lavanda)}
+.resultados{margin:.5rem 0}
+.resultados a{display:flex;justify-content:space-between;padding:.5rem .75rem;border-radius:8px;text-decoration:none;background:var(--lavanda);margin-bottom:.35rem;color:var(--tinta)}
+.resultados small{color:var(--suave)}
+.vacio{color:var(--suave);font-size:.9rem;padding:.5rem}
+.lista a{display:block;padding:.6rem .75rem;border-radius:8px;text-decoration:none;color:var(--texto);border-left:3px solid transparent}
+.lista a:hover{background:var(--niebla)}
+.lista a.act{background:var(--lavanda);border-left-color:var(--violeta);font-weight:600;color:var(--morado)}
+.sep{display:block;margin:1.1rem 0 .3rem;padding:0 .75rem;font-size:.85rem;color:var(--suave);font-weight:600}
+
+/* Contenido */
+main{max-width:1060px;margin:0 auto;padding:2rem 1.25rem 3rem;outline:none}
+.bloque{margin-top:2.75rem}
+.bloque>h2{font-size:1.5rem;margin-bottom:1rem}
+.cab{padding:1.5rem 0 .5rem}
+.cab h1{font-size:clamp(1.9rem,4vw,2.6rem);margin:.5rem 0}
+.cab p{max-width:62ch;color:var(--suave);font-size:1.05rem}
+.tag{display:inline-block;background:var(--lavanda);color:var(--morado);border-radius:99px;padding:.15rem .75rem;font-size:.85rem;font-weight:600}
+
+/* Oscurecimiento al pasar el mouse*/
+.hv{transition:background .3s,color .3s}
+.hv:hover,.hv.on{background:var(--tinta);color:#fff}
+.hv:hover :is(h2,h3,strong,span,p,li,dt,dd),.hv.on :is(h2,h3,strong,span,p,li,dt,dd){color:#fff;transition:color .3s}
+
+.pie{display:flex;align-items:center;justify-content:center;gap:.8rem;padding:1.5rem 1rem;background:#fff;border-top:1px solid var(--borde);color:var(--suave);font-size:.9rem;text-align:center}
+.pie img{height:26px}
+
+
+.marca span{font-size:1rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

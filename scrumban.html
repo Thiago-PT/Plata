@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scrumban | Metodologías de software</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/metodologia.css">
+  <link rel="stylesheet" href="css/scrumban.css">
+</head>
+<body>
+  <header class="top">
+    <a href="index.html" class="marca" aria-label="Ir al inicio">
+      <img src="assets/udi-logo-recorte.png" alt="Logo de la UDI">
+      <span>Metodologías de software</span>
+    </a>
+    <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+  </header>
+
+  <div id="scrim" class="scrim"></div>
+  <nav id="drawer" class="drawer" aria-label="Navegación principal">
+    <label for="buscar" class="sr">Buscar en el sitio</label>
+    <input id="buscar" type="search" placeholder="Buscar sprint, WIP, Scrum..." autocomplete="off">
+    <div id="resultados" class="resultados"></div>
+    <div class="lista">
+      <a href="index.html">Inicio</a>
+      <span class="sep">Metodologías</span>
+      <a href="cascada.html">Cascada (Waterfall)</a>
+      <a href="scrum.html">Scrum</a>
+      <a href="kanban.html">Kanban</a>
+      <a href="devops.html">DevOps</a>
+      <a href="scrumban.html" class="act" aria-current="page">Scrumban</a>
+      <span class="sep">Recursos</span>
+      <a href="comparativa.html">Tabla comparativa</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="referencias.html">Referencias</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="cab"><span class="tag">Híbrido</span><h1>Scrumban</h1><p>Combina los roles y reuniones de Scrum con el tablero y los límites WIP de Kanban. Nació como puente para equipos que migran de Scrum a flujo continuo.</p></header>
+    <section class="bloque"><h2>Ciclo de vida</h2>
+      <div class="dg"><svg viewBox="0 0 900 280" class="dg-flujo" role="group" aria-label="Diagrama de flujo de Scrumban"><defs><marker id="pt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="punta"/></marker></defs>
+ <g class="fl" marker-end="url(#pt)"><path d="M170 140H225" marker-end="url(#pt)"/><path d="M375 140H440" marker-end="url(#pt)"/><path d="M300 95V58" marker-end="url(#pt)"/><path d="M375 34H535V110" marker-end="url(#pt)"/><path d="M630 140H700" marker-end="url(#pt)"/><path d="M785 170V250H300V185" marker-end="url(#pt)"/></g>
+ <g data-paso="0"><rect class="f" x="20" y="110" width="150" height="60" rx="12"/><text class="tx" x="95" y="137" text-anchor="middle">Backlog</text><text class="tx" x="95" y="154" text-anchor="middle">priorizado</text></g><g data-paso="1"><polygon class="f" points="300,95 375,140 300,185 225,140"/><text class="tx" x="300" y="136" text-anchor="middle">¿Pocas tareas</text><text class="tx" x="300" y="152" text-anchor="middle">listas?</text></g>
+ <g data-paso="2"><rect class="f" x="225" y="10" width="150" height="48" rx="12"/><text class="tx" x="300" y="39" text-anchor="middle">Planificar</text></g><g data-paso="3"><rect class="f" x="440" y="110" width="190" height="60" rx="12"/><text class="tx" x="535" y="137" text-anchor="middle">Trabajar con</text><text class="tx" x="535" y="154" text-anchor="middle">límite WIP</text></g><g data-paso="4"><rect class="f" x="700" y="110" width="170" height="60" rx="12"/><text class="tx" x="785" y="137" text-anchor="middle">Revisar y</text><text class="tx" x="785" y="154" text-anchor="middle">mejorar</text></g>
+ <text class="nota" x="312" y="82">Sí</text><text class="nota" x="398" y="130">No</text><text class="nota" x="540" y="242">Ciclo continuo</text></svg></div>
+      <ol class="pasos"><li class="hv" data-paso="0"><strong>Backlog priorizado</strong><span>Lista ordenada de lo pendiente, visible en el tablero.</span></li><li class="hv" data-paso="1"><strong>¿Pocas tareas listas?</strong><span>Si la columna Listo baja de un umbral, se activa la planificación.</span></li><li class="hv" data-paso="2"><strong>Planificar</strong><span>Reunión breve que solo ocurre cuando hace falta, sin sprints fijos.</span></li><li class="hv" data-paso="3"><strong>Trabajar con límite WIP</strong><span>El equipo toma tareas sin exceder el tope de cada columna.</span></li><li class="hv" data-paso="4"><strong>Revisar y mejorar</strong><span>Revisiones periódicas ajustan reglas y límites.</span></li></ol></section>
+    <section class="bloque"><h2>Características principales</h2><div class="tres"><article class="hv"><p>Mezcla la estructura de Scrum con el flujo de Kanban.</p></article><article class="hv"><p>Planificación bajo demanda, sin sprints obligatorios.</p></article><article class="hv"><p>Tablero visual con límites WIP.</p></article></div></section>
+    <section class="bloque dos"><div class="pro hv"><h2>Ventajas</h2><ul><li>Flexibilidad sin perder del todo la estructura.</li><li>Buen balance entre planificación y flujo.</li><li>Transición sencilla desde Scrum.</li></ul></div><div class="con hv"><h2>Desventajas</h2><ul><li>No existe una guía oficial única.</li><li>Sin reglas claras puede volverse ambiguo.</li><li>Exige equipos con algo de experiencia.</li></ul></div></section>
+  </main>
+
+  <footer class="pie">
+    <img src="assets/udi-logo-recorte.png" alt="">
+    <p>Edwin Santiago Plata Torrado · Ingeniería de Sistemas · UDI San Gil</p>
+  </footer>
+
+  <script src="js/base.js"></script>
+  <script src="js/scrumban.js"></script>
+</body>
+</html>

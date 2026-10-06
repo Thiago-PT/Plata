@@ -1,0 +1,7 @@
+.dg-ciclo{width:100%;max-width:640px;display:block;margin:0 auto}
+.anillo{fill:none;stroke:var(--violeta);stroke-width:2;stroke-dasharray:6 6;opacity:.6}
+.f{fill:var(--morado);transition:fill .3s}
+g.on .f{fill:var(--tinta)}
+.num{fill:#fff;font:600 13px Inter,sans-serif}
+.lbl{fill:var(--tinta);font:500 13px Inter,sans-serif;paint-order:stroke;stroke:#fff;stroke-width:4px}
+.centro{fill:var(--suave);font:600 13px Sora,sans-serif}

@@ -1,0 +1,8 @@
+.tabla-wrap{overflow-x:auto;margin-top:1.25rem;border-radius:var(--r);border:1px solid var(--borde);background:#fff}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:.93rem}
+th,td{padding:.8rem 1rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--lavanda)}
+thead th{background:var(--morado);color:#fff;font-family:Sora,sans-serif;font-size:.9rem}
+tbody th{background:var(--niebla);color:var(--tinta);width:110px}
+td,thead th{transition:background .25s,color .25s}
+td.on{background:var(--tinta);color:#fff}
+thead th.on{background:#2E1065}

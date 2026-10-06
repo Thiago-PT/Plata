@@ -1,0 +1,4 @@
+.dg-cascada{display:grid;gap:.4rem}
+.dg-cascada .paso{background:linear-gradient(90deg,var(--morado),var(--violeta));color:#fff;padding:.55rem 1rem;border-radius:8px;width:30%;min-width:150px;font-weight:600;font-size:.92rem;transition:background .3s}
+.dg-cascada .paso.on{background:var(--tinta)}
+@media (max-width:760px){.dg-cascada .paso{width:auto}}

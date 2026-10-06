@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glosario | Metodologías de software</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/glosario.css">
+</head>
+<body>
+  <header class="top">
+    <a href="index.html" class="marca" aria-label="Ir al inicio">
+      <img src="assets/udi-logo-recorte.png" alt="Logo de la UDI">
+      <span>Metodologías de software</span>
+    </a>
+    <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+  </header>
+
+  <div id="scrim" class="scrim"></div>
+  <nav id="drawer" class="drawer" aria-label="Navegación principal">
+    <label for="buscar" class="sr">Buscar en el sitio</label>
+    <input id="buscar" type="search" placeholder="Buscar sprint, WIP, Scrum..." autocomplete="off">
+    <div id="resultados" class="resultados"></div>
+    <div class="lista">
+      <a href="index.html">Inicio</a>
+      <span class="sep">Metodologías</span>
+      <a href="cascada.html">Cascada (Waterfall)</a>
+      <a href="scrum.html">Scrum</a>
+      <a href="kanban.html">Kanban</a>
+      <a href="devops.html">DevOps</a>
+      <a href="scrumban.html">Scrumban</a>
+      <span class="sep">Recursos</span>
+      <a href="comparativa.html">Tabla comparativa</a>
+      <a href="glosario.html" class="act" aria-current="page">Glosario</a>
+      <a href="referencias.html">Referencias</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="cab"><h1>Glosario</h1><p>Términos técnicos que aparecen en el sitio.</p></header>
+    <input id="gl-q" class="filtro" type="search" placeholder="Filtrar términos" aria-label="Filtrar glosario">
+    <dl class="glosario"><dt>Backlog</dt><dd class="hv">Lista priorizada de tareas o funcionalidades pendientes de un producto.</dd>
+<dt>Sprint</dt><dd class="hv">Periodo fijo, de una a cuatro semanas, en el que Scrum entrega un incremento.</dd>
+<dt>Incremento</dt><dd class="hv">Parte funcional del producto terminada al final de una iteración.</dd>
+<dt>Product Owner</dt><dd class="hv">Rol de Scrum que representa al cliente y prioriza el backlog.</dd>
+<dt>Scrum Master</dt><dd class="hv">Rol que facilita el proceso Scrum y elimina obstáculos del equipo.</dd>
+<dt>WIP (Work In Progress)</dt><dd class="hv">Cantidad de tareas en ejecución al mismo tiempo.</dd>
+<dt>Cuello de botella</dt><dd class="hv">Punto del proceso donde el trabajo se acumula y frena el flujo.</dd>
+<dt>Tiempo de ciclo</dt><dd class="hv">Tiempo que tarda una tarea desde que inicia hasta que termina.</dd>
+<dt>CI/CD</dt><dd class="hv">Integración y entrega continuas: automatizan la compilación, las pruebas y el despliegue.</dd>
+<dt>Infraestructura como código</dt><dd class="hv">Gestión de servidores y redes mediante archivos de configuración versionables.</dd>
+<dt>Ágil</dt><dd class="hv">Enfoque que prioriza la adaptación al cambio, la colaboración y las entregas frecuentes.</dd>
+<dt>Despliegue</dt><dd class="hv">Proceso de poner una versión del software a disposición de los usuarios.</dd></dl>
+    <p id="gl-vacio" class="vacio" hidden>No hay términos que coincidan. Prueba con otra palabra.</p>
+  </main>
+
+  <footer class="pie">
+    <img src="assets/udi-logo-recorte.png" alt="">
+    <p>Edwin Santiago Plata Torrado · Ingeniería de Sistemas · UDI San Gil</p>
+  </footer>
+
+  <script src="js/base.js"></script>
+  <script src="js/glosario.js"></script>
+</body>
+</html>
