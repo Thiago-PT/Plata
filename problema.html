@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problema | RutaYa</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/problema.css">
+</head>
+
+<body>
+    <header class="top">
+        <a href="index.html" class="marca" aria-label="Ir al inicio">
+            <img src="assets/udi-logo-recorte.png" alt="Logo de la UDI">
+            <span>Metodologías de software</span>
+        </a>
+        <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="drawer"><i></i><i></i><i></i></button>
+    </header>
+
+    <div id="scrim" class="scrim"></div>
+    <nav id="drawer" class="drawer" aria-label="Navegación principal">
+        <label for="buscar" class="sr">Buscar en el sitio</label>
+        <input id="buscar" type="search" placeholder="Buscar sprint, WIP, Scrum..." autocomplete="off">
+        <div id="resultados" class="resultados"></div>
+        <div class="lista">
+            <a href="index.html">Inicio</a>
+            <span class="sep">Metodologías</span>
+            <a href="cascada.html">Cascada (Waterfall)</a>
+            <a href="scrum.html">Scrum</a>
+            <a href="kanban.html">Kanban</a>
+            <a href="devops.html">DevOps</a>
+            <a href="scrumban.html">Scrumban</a>
+            <span class="sep">Proyecto final</span>
+            <a href="problema.html" class="act" aria-current="page">Problema · RutaYa</a>
+            <span class="sep">Recursos</span>
+            <a href="comparativa.html">Tabla comparativa</a>
+            <a href="glosario.html">Glosario</a>
+            <a href="referencias.html">Referencias</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Portada de la sección -->
+        <section class="p-hero">
+            <div>
+                <p class="lead">Proyecto final · Tercer corte</p>
+                <h1>Esperar la buseta no debería ser una apuesta</h1>
+                <p>En San Gil, quien usa el transporte público no sabe cuándo pasará su buseta. RutaYa propone una
+                    forma de saberlo antes de salir de casa.</p>
+                <a class="btn" href="#solucion">Ver la solución</a>
+            </div>
+            <img src="assets/rutaya-logo.png"
+                alt="Logo de RutaYa: una buseta con un marcador de ubicación y el lema «Tu transporte, sin incertidumbre»">
+        </section>
+
+        <!-- 1. PROBLEMA -->
+        <section class="bloque" id="problema" aria-labelledby="t-problema">
+            <h2 id="t-problema">El problema: busetas sin horario confiable</h2>
+            <p class="intro-p">En San Gil, Santander, las busetas del transporte público normalmente no cumplen el
+                horario previsto y a veces sufren dificultades técnicas en el camino. Como el usuario no tiene forma de
+                saber dónde está su buseta ni cuándo llegará, la espera y el tiempo de viaje se vuelven impredecibles.
+            </p>
+
+            <figure class="ruta">
+                <svg viewBox="0 0 760 170" role="img" aria-labelledby="ruta-t ruta-d">
+                    <title id="ruta-t">Diferencia entre la hora prevista y la llegada real de una buseta</title>
+                    <desc id="ruta-d">Una línea de ruta con una parada al final. La buseta debería estar ya en la parada,
+                        pero la buseta real todavía va en camino.</desc>
+                    <line x1="40" y1="90" x2="720" y2="90" stroke="#DDD6FE" stroke-width="8" stroke-linecap="round" />
+                    <line x1="40" y1="90" x2="720" y2="90" stroke="#6D28D9" stroke-width="3" stroke-dasharray="2 12"
+                        stroke-linecap="round" />
+                    <circle cx="720" cy="90" r="12" fill="#6D28D9" />
+                    <text x="650" y="125">Tu parada</text>
+                    <rect x="560" y="40" width="70" height="30" rx="8" fill="#16A34A" />
+                    <text x="560" y="30">Según el horario</text>
+                    <g class="bus-real">
+                        <rect x="60" y="105" width="70" height="30" rx="8" fill="#DC2626" />
+                        <text x="60" y="155">Dónde va en realidad</text>
+                    </g>
+                </svg>
+                <figcaption>Esquema ilustrativo: la buseta debería estar ya en la parada, pero el usuario no tiene cómo
+                    saber que sigue lejos.</figcaption>
+            </figure>
+
+            <h3 class="sub">¿A quiénes afecta?</h3>
+            <div class="cajas">
+                <div class="hv">
+                    <p><b>Usuarios del transporte público de San Gil</b> que dependen de las busetas para ir al
+                        trabajo, al estudio o a citas médicas.</p>
+                </div>
+                <div class="hv">
+                    <p><b>Trabajadores y empresas</b>, porque la tardanza en llegar al trabajo genera conflictos en la
+                        relación laboral.</p>
+                </div>
+            </div>
+
+            <h3 class="sub">Causas y consecuencias</h3>
+            <div class="arbol">
+                <div class="col causas">
+                    <p class="etq">Causas: ¿por qué ocurre?</p>
+                    <h3>Lo que provoca el retraso</h3>
+                    <ul>
+                        <li><b>Poca estimación de usuarios.</b> Las empresas no calculan bien cuánta gente tomará el
+                            servicio y la oferta no se ajusta a la demanda.</li>
+                        <li><b>Tráfico vehicular</b> en las vías de la ciudad.</li>
+                        <li><b>Eventos inesperados</b> en la carretera que detienen o desvían la ruta.</li>
+                        <li><b>Dificultades técnicas</b> de las busetas.</li>
+                    </ul>
+                </div>
+                <div class="col centro">
+                    <p class="etq">Problema central</p>
+                    <h3>Las busetas no cumplen el horario y el usuario no sabe cuándo llegarán</h3>
+                    <p>La falta de información en tiempo real convierte cada trayecto en una espera incierta.</p>
+                </div>
+                <div class="col consecuencias">
+                    <p class="etq">Consecuencias: ¿qué pasa si continúa?</p>
+                    <h3>Lo que pierde el usuario</h3>
+                    <ul>
+                        <li><b>Más demora</b> en los trayectos, lo que afecta el horario de la persona.</li>
+                        <li><b>Conflictos laborales</b> entre trabajador y empresa por llegar tarde.</li>
+                        <li><b>Posibles afectaciones de salud</b> si el usuario ya tiene una condición y estos
+                            inconvenientes la agravan.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SOLUCIÓN -->
+        <section class="bloque" id="solucion" aria-labelledby="t-solucion">
+            <h2 id="t-solucion">La solución: RutaYa, tu transporte sin incertidumbre</h2>
+            <p class="intro-p">RutaYa es un sitio web y una aplicación móvil que muestra al usuario dónde está su buseta
+                y cuánto tardará en llegar. Así, la persona decide cuándo salir de casa en lugar de esperar sin
+                información.</p>
+
+            <h3 class="sub">¿Cómo funcionaría?</h3>
+            <div class="cajas">
+                <div class="hv">
+                    <h3>Horarios por empresa</h3>
+                    <p>El usuario consulta los horarios de cada empresa de transporte en un solo lugar.</p>
+                </div>
+                <div class="hv">
+                    <h3>Ubicación en tiempo real</h3>
+                    <p>Un mapa muestra dónde va cada buseta en este momento.</p>
+                </div>
+                <div class="hv">
+                    <h3>Tiempo estimado</h3>
+                    <p>Calcula en cuánto llegará la buseta a la parada y cuánto durará el recorrido.</p>
+                </div>
+                <div class="hv">
+                    <h3>Eventos y tráfico</h3>
+                    <p>Se pueden marcar eventos en la carretera y ver la densidad del tráfico para anticipar retrasos.
+                    </p>
+                </div>
+            </div>
+
+            <ol class="flujo" aria-label="Flujo de uso">
+                <li class="hv"><b>Elige</b>
+                    <p>El usuario escoge su empresa o su ruta.</p>
+                </li>
+                <li class="hv"><b>Consulta</b>
+                    <p>Ve la buseta en el mapa y la hora estimada de llegada.</p>
+                </li>
+                <li class="hv"><b>Decide</b>
+                    <p>Sale cuando le conviene y evita esperas largas.</p>
+                </li>
+            </ol>
+
+            <h3 class="sub">¿A quién beneficiaría?</h3>
+            <div class="cajas">
+                <div class="hv">
+                    <p><b>Usuarios del transporte público.</b> Planean su salida con información y pierden menos
+                        tiempo esperando.</p>
+                </div>
+                <div class="hv">
+                    <p><b>Trabajadores.</b> Llegan a tiempo y evitan conflictos con su empresa por la tardanza.</p>
+                </div>
+                <div class="hv">
+                    <p><b>Empresas de transporte.</b> Estiman mejor cuántos usuarios tomarán el servicio y reaccionan
+                        ante el tráfico y los eventos en la vía.</p>
+                </div>
+            </div>
+
+            <h3 class="sub">¿Cómo mejora la situación?</h3>
+            <p class="intro-p">Cada causa tiene una respuesta: el tráfico y los eventos se marcan en el mapa, la demanda
+                se puede estimar con los datos de uso y el usuario deja de depender de la suerte. Con menos
+                incertidumbre bajan las demoras, el estrés y los conflictos laborales que hoy genera el servicio.</p>
+        </section>
+
+        <section class="bloque" id="video" aria-labelledby="t-video">
+            <h2 id="t-video">Elevator pitch</h2>
+            <p class="intro-p">RutaYa explicada en un video corto.</p>
+            <div id="video-pitch" class="video" data-url="">
+                <p>El video estará disponible pronto.</p>
+            </div>
+        </section>
+
+        <!-- ODS -->
+        <section class="bloque" id="ods" aria-labelledby="t-ods">
+            <h2 id="t-ods">Objetivos de Desarrollo Sostenible vinculados</h2>
+            <p class="intro-p">RutaYa se vincula con dos objetivos de la Agenda 2030 de las Naciones Unidas.</p>
+
+            <div class="ods">
+                <article class="ods-card ods-11">
+                    <div class="cab"><span class="num">11</span><span class="nom">Ciudades y comunidades
+                            sostenibles</span></div>
+                    <div class="cuerpo">
+                        <p>Este objetivo busca que las ciudades sean inclusivas, seguras y sostenibles, e incluye el
+                            acceso a sistemas de transporte seguros, asequibles y accesibles.</p>
+                        <p><b>Relación con RutaYa:</b> la aplicación mejora el servicio de transporte público de San Gil
+                            al dar información confiable sobre horarios y ubicación. Un transporte predecible anima a
+                            más personas a usarlo y hace más eficiente la movilidad urbana.</p>
+                    </div>
+                </article>
+                <article class="ods-card ods-3">
+                    <div class="cab"><span class="num">3</span><span class="nom">Salud y bienestar</span></div>
+                    <div class="cuerpo">
+                        <p>Este objetivo busca garantizar una vida sana y promover el bienestar de todas las personas.
+                        </p>
+                        <p><b>Relación con RutaYa:</b> los retrasos del transporte pueden afectar a quienes van a citas
+                            médicas o ya tienen una condición de salud. Al reducir la espera y la incertidumbre, RutaYa
+                            contribuye al bienestar de los usuarios.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="conexion hv">
+                <p><b>Problema → solución → ODS:</b> las busetas no cumplen el horario y el usuario no sabe cuándo
+                    llegan (problema); RutaYa le da ubicación y tiempos estimados en tiempo real (solución); así se
+                    mejora el transporte público de la ciudad (ODS 11) y el bienestar de quienes lo usan (ODS 3).</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <img src="assets/udi-logo-recorte.png" alt="">
+        <p>Edwin Santiago Plata Torrado · Ingeniería de Sistemas · UDI San Gil</p>
+    </footer>
+
+    <script src="js/base.js"></script>
+    <script src="js/problema.js"></script>
+</body>
+
+</html>
